@@ -60,8 +60,10 @@ class _FormScreenState extends State<FormScreen> {
                   style: TextStyle(fontSize: 20),
                 ),
                 TextFormField(
-                  validator:
-                      EmailValidator(errorText: "รูปแบบอีเมลไม่ถูกต้อง!!"),
+                  validator: MultiValidator([
+                    EmailValidator(errorText: "รูปแบบอีเมลไม่ถูกต้อง!!"),
+                    RequiredValidator(errorText: "กรุณาป้อนอีเมล!!")
+                  ]),
                   onSaved: (String? email) {
                     myStudent.email = email;
                   },
