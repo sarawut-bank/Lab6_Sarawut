@@ -113,8 +113,6 @@ class _FormScreenState extends State<FormScreen> {
                               onPressed: () {
                                 if (formKey.currentState!.validate()) {
                                   formKey.currentState?.save();
-                                  print(
-                                      "ข้อมูล = ${myStudent.fname}${myStudent.lname}${myStudent.email}${myStudent.score}");
                                 }
                               }),
                         ),
